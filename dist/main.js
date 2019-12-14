@@ -1,16 +1,18 @@
-"use strict";
 // ==UserScript==
-// @name         AtCoderCustomDefaultSubmissions
+// @name         AtCoder Custom Default Submissions
 // @namespace    https://github.com/ktny
-// @version      1.0
-// @description  AtCoderのすべての提出をデフォルトで使用言語、ACで絞り込みコード長の昇順にする
+// @version      1.2
+// @description  AtCoderのすべての提出の絞り込み、並び替え設定のデフォルトを設定します。本スクリプトのデフォルトは言語C++, 結果AC, コード長の昇順に並び替えです。
 // @author       ktnyori
 // @license      MIT
 // @include      https://atcoder.jp/contests/*
 // ==/UserScript==
 (function () {
     'use strict';
-    const lang = 'C++'; // langsの中からよく使用する言語に変更
+    /**********************************************
+     * langsの中から自分が使用する言語に変更してください
+    ***********************************************/
+    const lang = 'C++';
     const langs = {
         'C++': 3003,
         'C#': 3006,
