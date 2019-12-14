@@ -1,3 +1,4 @@
+"use strict";
 // ==UserScript==
 // @name         AtCoderCustomDefaultSubmissions
 // @namespace    https://github.com/ktny
@@ -7,10 +8,8 @@
 // @license      MIT
 // @include      https://atcoder.jp/contests/*
 // ==/UserScript==
-
-(function() {
+(function () {
     'use strict';
-
     const lang = 'C++'; // langsの中からよく使用する言語に変更
     const langs = {
         'C++': 3003,
@@ -31,20 +30,19 @@
         'Rust': 3504,
         'Kotlin': 3523
     };
-
     const params = {
         'f.Language': langs[lang],
-        'f.Status': 'AC', // WA, TLE, MLE, RE, CE, QLE, OLE, IE, WJ, WR, Judging
-        'orderBy': 'source_length', // score, time_consumption, memory_consumption
+        // AC, WA, TLE, MLE, RE, CE, QLE, OLE, IE, WJ, WR, Judging
+        'f.Status': 'AC',
+        // source_length, time_consumption, memory_consumption, score
+        'orderBy': 'source_length',
     };
-
     const esc = encodeURIComponent;
     const querystring = Object.keys(params).map(k => esc(k) + '=' + esc(params[k])).join('&');
-    const links = document.getElementById('contest-nav-tabs').getElementsByTagName('a');
-
+    const links = document.querySelectorAll('#contest-nav-tabs a');
     for (let i = 0; i < links.length; i++) {
         const href = links[i].getAttribute('href');
-        if (href.endsWith('submissions')) {
+        if (href && href.endsWith('submissions')) {
             links[i].setAttribute('href', `${href}?${querystring}`);
         }
     }
