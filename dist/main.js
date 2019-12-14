@@ -1,16 +1,18 @@
-"use strict";
 // ==UserScript==
 // @name         AtCoderCustomDefaultSubmissions
 // @namespace    https://github.com/ktny
-// @version      1.0
-// @description  AtCoderのすべての提出をデフォルトで使用言語、ACで絞り込みコード長の昇順にする
+// @version      1.1
+// @description  AtCoderのすべての提出をデフォルトで使用言語（デフォルトC++）、ACで絞り込みコード長の昇順にする
 // @author       ktnyori
 // @license      MIT
 // @include      https://atcoder.jp/contests/*
 // ==/UserScript==
 (function () {
     'use strict';
-    const lang = 'C++'; // langsの中からよく使用する言語に変更
+    /**********************************************
+     * langsの中から自分が使用する言語に変更してください
+    ***********************************************/
+    const lang = 'C++';
     const langs = {
         'C++': 3003,
         'C#': 3006,
