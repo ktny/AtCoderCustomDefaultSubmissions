@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         New Userscript
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @name         AtCoderCustomDefaultSubmissions
+// @namespace    https://github.com/ktny
+// @version      1.0
+// @description  AtCoderのすべての提出をデフォルトで使用言語、ACで絞り込みコード長の昇順にする
+// @author       ktnyori
+// @license      MIT
 // @include      https://atcoder.jp/contests/*
-// @grant        none
 // ==/UserScript==
 
 (function() {
