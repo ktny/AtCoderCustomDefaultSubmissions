@@ -6,10 +6,9 @@
 // @author       You
 // @include      https://atcoder.jp/contests/*
 // @grant        none
-// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
 // ==/UserScript==
 
-$(function() {
+(function() {
     'use strict';
 
     const lang = 'C++'; // langsの中からよく使用する言語に変更
@@ -41,12 +40,12 @@ $(function() {
 
     const esc = encodeURIComponent;
     const querystring = Object.keys(params).map(k => esc(k) + '=' + esc(params[k])).join('&');
-    const $links = $('#contest-nav-tabs').find('a');
-    $links.each(function() {
-        const link = $(this).attr('href');
-        if (link.endsWith('submissions')) {
-            console.log(link);
-            $(this).attr('href', `${link}?${querystring}`);
+    const links = document.getElementById('contest-nav-tabs').getElementsByTagName('a');
+
+    for (let i = 0; i < links.length; i++) {
+        const href = links[i].getAttribute('href');
+        if (href.endsWith('submissions')) {
+            links[i].setAttribute('href', `${href}?${querystring}`);
         }
-    })
-});
+    }
+})();
