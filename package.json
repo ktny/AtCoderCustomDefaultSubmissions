@@ -1,0 +1,20 @@
+{
+  "name": "atcodercustomdefaultsubmissions",
+  "version": "1.5.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktny/AtCoderCustomDefaultSubmissions.git"
+  },
+  "author": "ktny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ktny/AtCoderCustomDefaultSubmissions/issues"
+  },
+  "homepage": "https://github.com/ktny/AtCoderCustomDefaultSubmissions#readme"
+}

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AtCoder Custom Default Submissions
 // @namespace    https://github.com/ktny
-// @version      1.3
+// @version      1.5
 // @description  AtCoderのすべての提出の絞り込み、並び替え設定のデフォルトを設定します。本スクリプトのデフォルトは言語C++, 結果AC, コード長の昇順に並び替えです。
 // @author       ktnyori
 // @license      MIT
